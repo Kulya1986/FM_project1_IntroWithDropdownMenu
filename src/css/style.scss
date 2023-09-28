@@ -1,0 +1,461 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+body{
+   font-family: $fonts; 
+   color: $black-color;
+   font-weight: 500;
+   font-style: normal;
+   margin: 0;
+   line-height: 1rem;
+   width: 100%;
+   height: 100%;
+}
+
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    color: $gray-color;
+    font-size: $text;
+
+    #logo{
+        align-items: end;
+        margin-right: 2.5rem;
+
+        svg{
+            padding-top: 2px;
+        }
+    }
+    #mobile-menu{
+        display: none;
+    }
+    .nav-subarea{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+
+        #mobile-menu-close{
+            display: none;
+        }
+        #menu{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+    
+            .menu-item{
+                margin: 0rem 1.5rem;
+                
+                .submenu{
+                    display: grid;
+                    gap: .8rem;
+                    margin: .5rem 0rem 0rem;
+                    padding: 1rem 1.5rem;
+                    z-index: 1;
+                    position: absolute;
+                    top:3.5rem;
+                    border-radius: 10px;
+                    background-color: $white-color;
+                    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+                    line-height: 1rem;
+                    align-items: center;
+                    overflow: hidden;
+                    transition: all .5s ease-in-out;
+                    
+                    .submenu-item-img:hover + .submenu-item-text, .submenu-item-text:hover{
+                        color: $black-color;
+                        cursor: pointer;
+                    }
+                }
+                .submenu:hover{
+                    color: $gray-color;
+                }
+                .submenu.closed{
+                    height: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+                #menuCompany > .submenu.opened{
+                    height: 104px;
+                }
+                #menuFeatures > .submenu.opened{
+                    height: 144px;
+                }
+            }
+            #menuFeatures{
+                .submenu{
+                    left: 7rem;
+                    grid-template-columns: 1fr 4fr;
+                }
+            }
+            #menuCompany{
+                .submenu{
+                    left: 19.3rem;
+                    grid-template-columns: 1fr;
+                }
+            }
+            .menu-item > svg{
+                pointer-events: none;
+            }
+            .menu-item:hover{
+                cursor: pointer;
+                color: $black-color;
+                
+                svg > path{
+                    stroke: $black-color;
+                }
+            }
+        }
+        #account-area{
+            margin-left: auto;
+            
+            a{
+                font-family: $fonts;
+                font-size: $text;
+                text-decoration: none;
+                line-height: 1rem;
+            }
+            button{
+                font-family: $fonts;
+                font-size: $text;
+                font-weight: 500;
+                font-style: normal;
+                padding: .75rem 1.5rem;
+                border: 1.5px solid $gray-color;
+                border-radius: 14px;
+                line-height: 1rem;
+                color: $gray-color;
+                background-color: $white-color;
+                margin-left: 2.5rem;
+            }
+            :hover{
+                cursor: pointer;
+                color: $black-color;
+            }
+        }
+    }   
+}
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 5rem 5rem 7.5rem;
+
+    #mobile-image{
+        display: none;
+    }
+    #right{
+        width:40%;
+        
+        img{
+            width: 100%;
+            padding: .1rem;
+        }
+    }
+    #left{
+        padding-right: 1rem;
+
+        h1{
+            font-size: $heading1;
+            font-weight: 700;
+            line-height: 80px;
+            letter-spacing: .11rem;
+            margin: 0rem;
+            padding: 4.5rem 0rem 3rem;
+        }
+        p{
+            color: $gray-color;
+            font-size: $p-size;
+            line-height: 28px;
+            max-width: 29rem;
+            padding-bottom: 3rem;
+        }
+        button{
+            background-color: $black-color;
+            font-size: $p-size;
+            line-height: 28px;
+            color: $white-color;
+            background-color: $black-color;
+            letter-spacing: .05rem;
+            padding: .8rem 1.8rem;
+            border-radius: 1rem;
+            border: 1px solid $black-color;
+            font-weight: 500;
+            font-style: normal;
+        }
+        button:hover{
+            color: $black-color;
+            background-color: $white-color;
+            cursor: pointer;
+        }
+        #clients{
+            padding-top: 7rem;
+            min-width: 22rem;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            color: $light-grey-color;
+        }
+    }
+}
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    font-size: 10px;
+    margin-top: auto;
+    color: $gray-color;
+    font-family: $fonts;
+    justify-content: center;
+
+    a{
+        color: $gray-color;
+    }
+    a:hover{
+        color: $black-color;
+        text-decoration: none;
+    }
+    a:visited{
+        color: $black-color;
+    }
+}
+
+#container{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1.25rem 2.5rem;
+}
+
+@media all and (max-width: 860px){
+    #container{
+        margin: 1rem 1rem;
+        min-width: 700px;
+        overflow: scroll;
+    }
+    nav{
+        #logo{
+            margin-right: .5rem;
+        }
+        .nav-subarea{
+            #menu{
+                .menu-item{
+                    margin: 0rem .5rem;
+                }
+                #menuFeatures{
+                    .submenu{
+                        left: 2.8rem;
+                    }
+                }   
+                #menuCompany{
+                    .submenu{
+                        left: 13.5rem;
+                    } 
+                }
+            }
+            #account-area{
+                button{
+                    margin-left: 1rem;
+                }
+            }
+        }   
+    }
+    main{
+        padding: 5rem 3rem; 
+
+        #right{
+            width:50%;
+        }
+        #left{
+            h1{
+                font-size: 48px;
+                line-height: 48px;
+                letter-spacing: .09rem;
+                padding: 3rem 0rem 2rem;
+            }
+            p{
+                font-size: $p-size-mobile;
+                line-height: 18px;
+                max-width: 20rem;
+                padding-bottom: 2rem;
+            }
+            #clients{
+                padding-top: 5rem;
+                img:first-child{
+                    height: 16px;
+                }
+                img:nth-child(2){
+                    height: 29px;
+                }
+                img:nth-child(3){
+                    height: 16px;
+                }
+                img:last-child{
+                    height: 19px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) and (orientation:portrait) 
+{
+    body{
+        min-height: 100vh;
+    }
+    #container{
+        flex-direction: column;
+        margin: 1rem 0rem;
+        min-width: 100vw;
+        overflow: auto;
+    }
+    nav{
+        width: auto;
+        margin: 0rem;
+        padding: 0rem 1rem 1.5rem;
+        
+        #mobile-menu{
+            display: block;
+            margin-left: auto;
+
+            img:hover{
+                cursor: pointer;
+            }
+        }
+        .nav-subarea{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;    
+            position: fixed;
+            top: 0;
+            margin: 0;
+            height: 100%;
+            background-color: $white-color;
+            align-items: start;
+            padding: 1.5rem;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s ease-in-out;
+
+            #mobile-menu-close{
+                display: block;
+                width: 100%;
+                text-align: right;
+                
+                img:hover{
+                    cursor: pointer;
+                }
+            }
+            #menu{
+                flex-direction: column;
+                width: 100%;
+                padding: 3rem 0rem 1rem;
+
+                .menu-item{
+                    margin: .5rem 0rem;
+                    font-size: $p-size-mobile;
+                    line-height: 26px;
+                    
+                    .submenu{
+                        position: relative;
+                        top:0rem;
+                        left: 0rem;
+                        box-shadow: none;
+                        line-height: 26px;
+                    }
+                }
+                #menuFeatures{    
+                    .submenu{
+                        left: 0rem;
+                        column-gap: 0rem;
+                        grid-template-columns: 1fr 5fr;
+                    }
+                }
+                #menuCompany{
+                    .submenu{
+                        left: 0rem;
+                    }
+                }
+            }
+            #account-area{
+                padding: 1rem 0rem;
+                width: 100%;
+                text-align: center;
+            
+                a{
+                    margin: 0rem;
+                    display: block;
+                    padding-bottom: 1rem;
+                }
+                button{
+                    width: 100%;
+                    margin: 0rem;
+                }
+            }
+        }
+        .nav-subarea.closed{
+            width: 0px;
+            right: -50px;
+        }
+        .nav-subarea.opened{
+            width: 240px;
+            right: 0;
+        }
+    }
+    main{
+        flex-direction: column;
+        padding: 0rem;
+        width: auto;
+        text-align: center;
+
+        #mobile-image{
+            display: block;
+            width: 100%;
+
+            img{
+                width: 100%;
+                padding: .1rem;
+            }
+        }
+        #right{
+            display: none;
+        }
+        #left{
+            padding: 0rem 1rem;
+
+            h1{
+                font-size: $heading1-mobile;
+                line-height: 42px;
+                letter-spacing: .06rem;
+                padding:2.5rem 0rem 0rem;
+                
+                br{
+                    display: none;
+                }
+            }
+            p{
+                font-size: $p-size-mobile;
+                line-height: 26px;
+                padding: 1.5rem 0rem;
+                margin: 0rem;
+            }
+            #clients{
+                margin-top: 0rem;
+                padding: 2.5rem 0rem 5rem;
+                min-width: 22rem;
+            }
+        }
+    }
+    footer{
+        text-align: center;
+        margin-top: auto;
+    }
+}

@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+body {
+  font-family: "Epilogue", sans-serif;
+  color: hsl(0, 0%, 8%);
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  line-height: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  color: hsl(0, 0%, 41%);
+  font-size: 14px;
+}
+nav #logo {
+  align-items: end;
+  margin-right: 2.5rem;
+}
+nav #logo svg {
+  padding-top: 2px;
+}
+nav #mobile-menu {
+  display: none;
+}
+nav .nav-subarea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+nav .nav-subarea #mobile-menu-close {
+  display: none;
+}
+nav .nav-subarea #menu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+nav .nav-subarea #menu .menu-item {
+  margin: 0rem 1.5rem;
+}
+nav .nav-subarea #menu .menu-item .submenu {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0.5rem 0rem 0rem;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+  position: absolute;
+  top: 3.5rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+  line-height: 1rem;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+nav .nav-subarea #menu .menu-item .submenu .submenu-item-img:hover + .submenu-item-text, nav .nav-subarea #menu .menu-item .submenu .submenu-item-text:hover {
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+nav .nav-subarea #menu .menu-item .submenu:hover {
+  color: hsl(0, 0%, 41%);
+}
+nav .nav-subarea #menu .menu-item .submenu.closed {
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+nav .nav-subarea #menu .menu-item #menuCompany > .submenu.opened {
+  height: 104px;
+}
+nav .nav-subarea #menu .menu-item #menuFeatures > .submenu.opened {
+  height: 144px;
+}
+nav .nav-subarea #menu #menuFeatures .submenu {
+  left: 7rem;
+  grid-template-columns: 1fr 4fr;
+}
+nav .nav-subarea #menu #menuCompany .submenu {
+  left: 19.3rem;
+  grid-template-columns: 1fr;
+}
+nav .nav-subarea #menu .menu-item > svg {
+  pointer-events: none;
+}
+nav .nav-subarea #menu .menu-item:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 8%);
+}
+nav .nav-subarea #menu .menu-item:hover svg > path {
+  stroke: hsl(0, 0%, 8%);
+}
+nav .nav-subarea #account-area {
+  margin-left: auto;
+}
+nav .nav-subarea #account-area a {
+  font-family: "Epilogue", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1rem;
+}
+nav .nav-subarea #account-area button {
+  font-family: "Epilogue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid hsl(0, 0%, 41%);
+  border-radius: 14px;
+  line-height: 1rem;
+  color: hsl(0, 0%, 41%);
+  background-color: hsl(0, 0%, 98%);
+  margin-left: 2.5rem;
+}
+nav .nav-subarea #account-area :hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 8%);
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 5rem 5rem 7.5rem;
+}
+main #mobile-image {
+  display: none;
+}
+main #right {
+  width: 40%;
+}
+main #right img {
+  width: 100%;
+  padding: 0.1rem;
+}
+main #left {
+  padding-right: 1rem;
+}
+main #left h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0.11rem;
+  margin: 0rem;
+  padding: 4.5rem 0rem 3rem;
+}
+main #left p {
+  color: hsl(0, 0%, 41%);
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 29rem;
+  padding-bottom: 3rem;
+}
+main #left button {
+  background-color: hsl(0, 0%, 8%);
+  font-size: 18px;
+  line-height: 28px;
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+  letter-spacing: 0.05rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(0, 0%, 8%);
+  font-weight: 500;
+  font-style: normal;
+}
+main #left button:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
+main #left #clients {
+  padding-top: 7rem;
+  min-width: 22rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(0, 0%, 68%);
+}
+
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  font-size: 10px;
+  margin-top: auto;
+  color: hsl(0, 0%, 41%);
+  font-family: "Epilogue", sans-serif;
+  justify-content: center;
+}
+footer a {
+  color: hsl(0, 0%, 41%);
+}
+footer a:hover {
+  color: hsl(0, 0%, 8%);
+  text-decoration: none;
+}
+footer a:visited {
+  color: hsl(0, 0%, 8%);
+}
+
+#container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 1.25rem 2.5rem;
+}
+
+@media all and (max-width: 860px) {
+  #container {
+    margin: 1rem 1rem;
+    min-width: 700px;
+    overflow: scroll;
+  }
+  nav #logo {
+    margin-right: 0.5rem;
+  }
+  nav .nav-subarea #menu .menu-item {
+    margin: 0rem 0.5rem;
+  }
+  nav .nav-subarea #menu #menuFeatures .submenu {
+    left: 2.8rem;
+  }
+  nav .nav-subarea #menu #menuCompany .submenu {
+    left: 13.5rem;
+  }
+  nav .nav-subarea #account-area button {
+    margin-left: 1rem;
+  }
+  main {
+    padding: 5rem 3rem;
+  }
+  main #right {
+    width: 50%;
+  }
+  main #left h1 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0.09rem;
+    padding: 3rem 0rem 2rem;
+  }
+  main #left p {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 20rem;
+    padding-bottom: 2rem;
+  }
+  main #left #clients {
+    padding-top: 5rem;
+  }
+  main #left #clients img:first-child {
+    height: 16px;
+  }
+  main #left #clients img:nth-child(2) {
+    height: 29px;
+  }
+  main #left #clients img:nth-child(3) {
+    height: 16px;
+  }
+  main #left #clients img:last-child {
+    height: 19px;
+  }
+}
+@media all and (max-width: 480px) and (orientation: portrait) {
+  body {
+    min-height: 100vh;
+  }
+  #container {
+    flex-direction: column;
+    margin: 1rem 0rem;
+    min-width: 100vw;
+    overflow: auto;
+  }
+  nav {
+    width: auto;
+    margin: 0rem;
+    padding: 0rem 1rem 1.5rem;
+  }
+  nav #mobile-menu {
+    display: block;
+    margin-left: auto;
+  }
+  nav #mobile-menu img:hover {
+    cursor: pointer;
+  }
+  nav .nav-subarea {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    background-color: hsl(0, 0%, 98%);
+    align-items: start;
+    padding: 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  nav .nav-subarea #mobile-menu-close {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+  nav .nav-subarea #mobile-menu-close img:hover {
+    cursor: pointer;
+  }
+  nav .nav-subarea #menu {
+    flex-direction: column;
+    width: 100%;
+    padding: 3rem 0rem 1rem;
+  }
+  nav .nav-subarea #menu .menu-item {
+    margin: 0.5rem 0rem;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  nav .nav-subarea #menu .menu-item .submenu {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    box-shadow: none;
+    line-height: 26px;
+  }
+  nav .nav-subarea #menu #menuFeatures .submenu {
+    left: 0rem;
+    column-gap: 0rem;
+    grid-template-columns: 1fr 5fr;
+  }
+  nav .nav-subarea #menu #menuCompany .submenu {
+    left: 0rem;
+  }
+  nav .nav-subarea #account-area {
+    padding: 1rem 0rem;
+    width: 100%;
+    text-align: center;
+  }
+  nav .nav-subarea #account-area a {
+    margin: 0rem;
+    display: block;
+    padding-bottom: 1rem;
+  }
+  nav .nav-subarea #account-area button {
+    width: 100%;
+    margin: 0rem;
+  }
+  nav .nav-subarea.closed {
+    width: 0px;
+    right: -50px;
+  }
+  nav .nav-subarea.opened {
+    width: 240px;
+    right: 0;
+  }
+  main {
+    flex-direction: column;
+    padding: 0rem;
+    width: auto;
+    text-align: center;
+  }
+  main #mobile-image {
+    display: block;
+    width: 100%;
+  }
+  main #mobile-image img {
+    width: 100%;
+    padding: 0.1rem;
+  }
+  main #right {
+    display: none;
+  }
+  main #left {
+    padding: 0rem 1rem;
+  }
+  main #left h1 {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.06rem;
+    padding: 2.5rem 0rem 0rem;
+  }
+  main #left h1 br {
+    display: none;
+  }
+  main #left p {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 1.5rem 0rem;
+    margin: 0rem;
+  }
+  main #left #clients {
+    margin-top: 0rem;
+    padding: 2.5rem 0rem 5rem;
+    min-width: 22rem;
+  }
+  footer {
+    text-align: center;
+    margin-top: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
